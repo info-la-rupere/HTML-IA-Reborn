@@ -14,6 +14,7 @@
     <div id="di" class="container">
         <div id="di2">
             <img id="im1" class="img1" src="twingo.jpeg"> 
+            <img id ="im2" class="img" src="twingoNenorocire.jpg">
         </div>
         <div class="text">
             <p id="p#1">This app was my magnum-opus in high school and I had a lot
@@ -29,7 +30,7 @@
             <th>Why an app?</th>
         </tr>
         <tr>
-            <td>As a school assignment</td>
+            <td>As a school assi.style.visibility='visible';gnment</td>
             <td>Because I love cars (they're my hobby)</td>
             <td>To be different</td>
         </tr>
@@ -56,7 +57,7 @@
 
 
     <script>
-        
+        let button=false;
         function skull_emoji()
         {
             //schimba titlul #1 (stil nenorocire)
@@ -95,6 +96,8 @@
 
             //schimbare culoare blyat
             document.body.style.backgroundColor = "#ffffff";
+
+            document.getElementById("im2").style.visibility='hidden';
         }
         
         function schimba_varsta()
@@ -102,6 +105,8 @@
             var an_nastere=new Date().getFullYear()-parseInt(document.getElementById("varsta").innerHTML);
             document.getElementById("varsta").innerHTML=an_nastere;
         }
+    
+
 
     </script>
 </body>
