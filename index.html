@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<header>
+    <link rel="icon" href="twingo.jpeg">
+    <title>Claudiu (All in Programming)</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</header>
+
+<body>
+    <h1 id="#1">Presentation page for my amazing app!</h1>
+    <h3 id="varsta" onmouseover="schimba_varsta()" onmouseleave=schimba_varsta()>2004</h3><!task 2>
+    <button onclick="skull_emoji()" >Alta Viata💀</button>
+
+    <div id="di" class="container">
+        <div id="di2">
+            <img id="im1" class="img1" src="twingo.jpeg"> 
+        </div>
+        <div class="text">
+            <p id="p#1">This app was my magnum-opus in high school and I had a lot
+                of fun learning the steps needed for it to come to fruition.
+            </p>
+        </div>
+    </div>
+
+    <table id="tab">
+        <tr>
+            <th>Why does it exist?</th>
+            <th>Why this subject?</th>
+            <th>Why an app?</th>
+        </tr>
+        <tr>
+            <td>As a school assignment</td>
+            <td>Because I love cars (they're my hobby)</td>
+            <td>To be different</td>
+        </tr>
+        <tr>
+            <td>Because it was fun to make!</td>
+            <td>Because Twingo needs more love :)</td>
+            <td>To learn something new</td>
+        </tr>
+    </table>
+    <h2 id="#2">Features:</h2>
+    <ul id="lista">
+        <li>Provide basic information about this car</li>
+        <li>Offer a fun way to see the key specs of
+            all the generations.
+        </li>
+        <li>Facilitate the search for the preferred model on 
+            the used market.
+        </li>
+    </ul> 
+    <p>Last, but certainly not least</p>
+    <a href="https://github.com/info-la-rupere/Twing-Tranquility">Here's a link to its repo on GitHub</a>
+    <br>
+    <a href="./main.html">Return to the Table of Contents</a>
+
+
+    <script>
+        
+        function skull_emoji()
+        {
+            //schimba titlul #1 (stil nenorocire)
+            document.getElementById("#1").innerHTML = "Sclav la BOSCH";
+            document.getElementById("#2").innerHTML = "Pasiuni viitoare:";
+            //se schimba paragraful #1 din div
+            document.getElementById("p#1").textContent = "Carierea mea de vis este de inginer in telecomunicatii pentru ca imi place acest domeniu";
+            //se modifica tabelul
+            document.getElementById("tab").innerHTML=`
+            <tr>
+            <th>Educatie</th>
+            <th>Practica</th>
+            <th>Experienta de lucru</th>
+            </tr>
+            <tr>
+                <td>ETTI UTCN</td>
+                <td>practica la facultate</td>
+                <td><a href="https://bosch.ro">Primul job - bosch intership</td>
+            </tr>
+            <tr>
+                <td>Because it was fun to make!</td>
+                <td>Because Twingo needs more love :)</td>
+                <td>To learn something new</td>
+            </tr>
+            `
+            //nenorocim lista (schimbam continutu)
+            document.getElementById("lista").innerHTML= `
+            <li>Drifting</li>
+            <li>Battminton</li>
+            <li>Electronica</li>
+            `
+
+            //accesare element din clasa hobbies
+            document.getElementById("im1").src="i8.jpeg";
+            document.getElementById("im1").className="img";
+
+            //schimbare culoare blyat
+            document.body.style.backgroundColor = "#ffffff";
+        }
+        
+        function schimba_varsta()
+        {
+            var an_nastere=new Date().getFullYear()-parseInt(document.getElementById("varsta").innerHTML);
+            document.getElementById("varsta").innerHTML=an_nastere;
+        }
+
+    </script>
+</body>
+</html>
